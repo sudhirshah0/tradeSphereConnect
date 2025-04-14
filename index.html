@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TradeSphere Connect - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="auth-container">
+    <div class="auth-box">
+      <h1 class="logo">
+        <img src="https://img.icons8.com/?size=40&id=24632&format=png&color=7B38F3" alt="TradeSphere Logo" class="logo-icon"/>
+        TradeSphere <span class="connect">CONNECT</span>
+      </h1>
+
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login')">Login</button>
+        <button class="tab" onclick="switchTab('signup')">Sign Up</button>
+      </div>
+
+      <div id="login-form" class="form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <form action="dashboard.html" class="login-btn">
+          <button class="login-btn" type="submit">Login</button>
+        </form>
+        <!-- <a href="forgetpass.html" class="forgot-password" onclick="openForgotPassword()">Forgot password?</a> -->
+         <!-- Forgot Password Link -->
+        <p class="forgot-password" onclick="openForgotPassword()">Forgot password?</p>
+
+        <!-- Forgot Password Modal -->
+        <div id="forgotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForgotPassword()">&times;</span>
+            <h2>Reset Password</h2>
+            <input type="email" id="forgotEmail" placeholder="Enter your email" />
+            <button onclick="submitForgotPassword()">Send Reset Link</button>
+        </div>
+        </div>
+        <button class="signup-alt-btn" onclick="switchTab('signup')">Sign Up</button>
+      </div>
+
+      <div id="signup-form" class="form hidden">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="confirm password">
+        <button class="login-btn">Create Account</button>
+        <button class="signup-alt-btn" onclick="switchTab('login')">Back to Login</button>
+      </div>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeSphere Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="https://img.icons8.com/?size=40&id=24632&format=png&color=7B38F3" alt="TradeSphere Logo" class="logo-icon"/>
+            <h2 class="logo-text">TradeSphere <span>Connect</span></h2>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html" class="nav-link active"><span>📊</span><span class="link-text">Dashboard</span></a>
+            <a href="applicationForm.html" class="nav-link"><span>📑</span><span class="link-text">Applications Form</span></a>
+            <a href="pendingApplication.html" class="nav-link"><span>👥</span><span class="link-text">Pending Applications</span></a>
+            <a href="approvedSupplier.html" class="nav-link"><span>✅</span><span class="link-text">Approved Suppliers</span></a>
+            <a href="rejectedSupplier.html" class="nav-link"><span>❌</span><span class="link-text">Rejected Suppliers</span></a>
+            <a href="analytics.html" class="nav-link"><span>📊</span><span class="link-text">Analytics Status</span></a>
+            <a href="settings.html" class="nav-link"><span>⚙️</span><span class="link-text">Settings</span></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <div class="profile">
+          <div class="profile-icon" id="profileToggle">👤</div>
+          <div class="profile-dropdown" id="profileDropdown">
+            <p>Name:sudhir sah</p>
+            <p>Email:sudhir@gmail.com</p>
+            <a href="index.html"><p>Logout</p></a>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="toggleSidebar">☰</button>
+      </header>
+
+      <!-- Cards -->
+      <div class="cards">
+        <div class="card" id="pendingCard">
+          <a href="pendingApplication.html"><h3>Pending Applications</h3></a>
+          <p>12</p>
+        </div>
+        <div class="card">
+          <a href="approvedSupplier.html"><h3>Approved Suppliers</h3></a>
+          <p>8</p>
+        </div>
+        <div class="card">
+          <a href="rejectedSupplier.html"><h3>Rejected Suppliers</h3></a>
+          <p>3</p>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="table-container">
+        <h2>Supplier Applications</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Supplier Name</th>
+              <th>Company Name</th>
+              <th>Category</th>
+              <th>Application Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Alex cary</td><td>Global Exports</td><td>Accessories</td><td>2025-04-02</td><td><button>View</button></td></tr>
+            <tr><td>pat cummins</td><td>Smith Manufacturing</td><td>Manufacturing</td><td>2025-04-02</td><td><button>View</button></td></tr>
+            <tr><td>Tim David</td><td>Garcia Textiles</td><td>Electornics</td><td>2025-03-29</td><td><button>View</button></td></tr>
+            <tr><td>Michael Hussy</td><td>Brown Electronics</td><td>Services</td><td>2025-03-27</td><td><button>View</button></td></tr>
+            <tr><td>Cris Gayle</td><td>Wei Solutions</td><td>Transportation</td><td>2025-03-25</td><td><button>View</button></td></tr>
+            <tr><td>Dwine Bravo</td><td>Martin Logistics</td><td>Accessories</td><td>2025-03-23</td><td><button>View</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

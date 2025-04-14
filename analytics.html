@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeSphere Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="https://img.icons8.com/?size=40&id=24632&format=png&color=7B38F3" alt="TradeSphere Logo" class="logo-icon"/>
+            <h2 class="logo-text">TradeSphere <span>Connect</span></h2>
+        </div>
+        <nav class="nav">
+            <a href="dashboard.html" class="nav-link"><span>📊</span><span class="link-text">Dashboard</span></a>
+            <a href="applicationForm.html" class="nav-link"><span>📑</span><span class="link-text">Applications Form</span></a>
+            <a href="pendingApplication.html" class="nav-link"><span>👥</span><span class="link-text">Pending Applications</span></a>
+            <a href="approvedSupplier.html" class="nav-link"><span>✅</span><span class="link-text">Approved Suppliers</span></a>
+            <a href="rejectedSupplier.html" class="nav-link"><span>❌</span><span class="link-text">Rejected Suppliers</span></a>
+            <a href="analytics.html" class="nav-link active"><span>📊</span><span class="link-text">Analytics Status</span></a>
+            <a href="settings.html" class="nav-link"><span>⚙️</span><span class="link-text">Settings</span></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Analytics status</h1>
+        <div class="profile">
+          <div class="profile-icon" id="profileToggle">👤</div>
+          <div class="profile-dropdown" id="profileDropdown">
+            <p>Name:sudhir sah</p>
+            <p>Email:sudhir@gmail.com</p>
+            <a href="index.html"><p>Logout</p></a>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="toggleSidebar">☰</button>
+      </header>
+
+      <div class="analytics-container">
+        <h2 class="analytics-heading">📊 Success Metrics</h2>
+        <div class="analytics-cards">
+    
+          <div class="analytics-card">
+            <h3>Total Applications</h3>
+            <p>1,240</p>
+          </div>
+    
+          <div class="analytics-card">
+            <h3>Approved Suppliers</h3>
+            <p>930</p>
+          </div>
+    
+          <div class="analytics-card">
+            <h3>Rejected Suppliers</h3>
+            <p>310</p>
+          </div>
+    
+          <div class="analytics-card">
+            <h3>Approval Rate</h3>
+            <p>75%</p>
+          </div>
+    
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <h3 class="chart-title">Supplier Status Overview</h3>
+        <canvas id="supplierPieChart"></canvas>
+      </div>
+    </div>
+  
+    <script>
+      const ctx = document.getElementById('supplierPieChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['Approved', 'Rejected'],
+          datasets: [{
+            label: 'Supplier Status',
+            data: [930, 310],
+            backgroundColor: ['#4caf50', '#f44336'],
+            borderColor: ['#ffffff', '#ffffff'],
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: '#103c64',
+                font: {
+                  size: 14
+                }
+              }
+            }
+          }
+        }
+      });
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>
